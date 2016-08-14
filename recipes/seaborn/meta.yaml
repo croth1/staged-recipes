@@ -1,5 +1,6 @@
-{% set version = "0.7.0" %}
-{% set name= "seaborn" %}
+{% set version = "0.7.1" %}
+{% set name = "seaborn" %}
+{% set sha256 = "fa274344b1ee72f723bab751c40a5c671801d47a29ee9b5e69fcf63a18ce5c5d" %}
 
 package:
   name: {{ name }}
@@ -7,8 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: 764c030a9db60ec804b9a506d0a38cd2
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -26,12 +27,12 @@ requirements:
     - matplotlib
     - scipy
     - pandas
+    - statsmodels
+    - patsy
 
 test:
   imports:
     - {{ name }}
-  commands:
-    - make test
 
 about:
   home: http://stanford.edu/~mwaskom/software/seaborn/
@@ -46,5 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
-    -msarahan
-    -r-jain1
+    - msarahan
+    - r-jain1
+    - croth1
