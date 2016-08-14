@@ -34,7 +34,7 @@ test:
 
 about:
   home: http://stanford.edu/~mwaskom/software/seaborn/
-  license: BSD
+  license: BSD 3-Clause
   license_file: LICENSE
   summary: Statistical data visualization
   description: |
