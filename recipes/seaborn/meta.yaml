@@ -18,8 +18,6 @@ build:
 requirements:
   build:
     - python
-    - numpy
-    - matplotlib
     - setuptools
   run:
     - python
